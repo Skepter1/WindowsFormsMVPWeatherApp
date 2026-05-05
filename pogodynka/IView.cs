@@ -8,6 +8,13 @@ namespace pogodynka
 {
     internal interface IView
     {
-        event Action checkWeather;
+        string CityName { get; }
+        string Temperature { set; }
+        string Pressure { set; }
+        string Humidity { set; }
+        string WindSpeed { set; }
+        string Visibility { set; }
+        //string WeatherIcon { set; }
+        event Action CheckWeather;
     }
 }

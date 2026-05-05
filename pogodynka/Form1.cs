@@ -8,7 +8,43 @@ namespace pogodynka
         {
             InitializeComponent();
         }
+        public event Action CheckWeather;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string CityName => textBoxNazwaMiasta.Text;
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string Temperature
+        {
+            set { textBoxTemperatura.Text = value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string Pressure
+        {
+            set { textBoxCisnienie.Text = value; }
+        }
+
+        public string Humidity
+        {
+            set { textBoxWilgotnosc.Text = value; }
+        }
+
+        public string WindSpeed
+        {
+            set { textBoxPredkoscWiatru.Text = value; }
+        }
+
+        public string Visibility
+        {
+            set { textBoxVisibility.Text = value; }
+        }
+
+
+        private void buttonSprawdz_Click(object sender, EventArgs e)
+        {
+            CheckWeather?.Invoke();
+        }
         
     }
 }

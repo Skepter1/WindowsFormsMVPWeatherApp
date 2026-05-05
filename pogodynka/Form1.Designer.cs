@@ -41,9 +41,9 @@
             groupBox1 = new GroupBox();
             textBox7 = new TextBox();
             label8 = new Label();
-            textBox6 = new TextBox();
-            labelUv = new Label();
-            textBox5 = new TextBox();
+            textBoxVisibility = new TextBox();
+            label = new Label();
+            textBoxPredkoscWiatru = new TextBox();
             labelWiatr = new Label();
             buttonSprawdz = new Button();
             groupBox1.SuspendLayout();
@@ -134,9 +134,9 @@
             // 
             groupBox1.Controls.Add(textBox7);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(labelUv);
-            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(textBoxVisibility);
+            groupBox1.Controls.Add(label);
+            groupBox1.Controls.Add(textBoxPredkoscWiatru);
             groupBox1.Controls.Add(labelWiatr);
             groupBox1.Controls.Add(textBoxTemperatura);
             groupBox1.Controls.Add(label5);
@@ -167,28 +167,28 @@
             label8.TabIndex = 15;
             label8.Text = "label8";
             // 
-            // textBox6
+            // textBoxVisibility
             // 
-            textBox6.Location = new Point(189, 145);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 14;
+            textBoxVisibility.Location = new Point(189, 145);
+            textBoxVisibility.Name = "textBoxVisibility";
+            textBoxVisibility.Size = new Size(100, 23);
+            textBoxVisibility.TabIndex = 14;
             // 
-            // labelUv
+            // label
             // 
-            labelUv.AutoSize = true;
-            labelUv.Location = new Point(208, 127);
-            labelUv.Name = "labelUv";
-            labelUv.Size = new Size(54, 15);
-            labelUv.TabIndex = 13;
-            labelUv.Text = "UV Index";
+            label.AutoSize = true;
+            label.Location = new Point(208, 127);
+            label.Name = "label";
+            label.Size = new Size(69, 15);
+            label.TabIndex = 13;
+            label.Text = "widoczność";
             // 
-            // textBox5
+            // textBoxPredkoscWiatru
             // 
-            textBox5.Location = new Point(36, 145);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 12;
+            textBoxPredkoscWiatru.Location = new Point(36, 145);
+            textBoxPredkoscWiatru.Name = "textBoxPredkoscWiatru";
+            textBoxPredkoscWiatru.Size = new Size(100, 23);
+            textBoxPredkoscWiatru.TabIndex = 12;
             // 
             // labelWiatr
             // 
@@ -207,6 +207,7 @@
             buttonSprawdz.TabIndex = 12;
             buttonSprawdz.Text = "Sprawdź pogodę";
             buttonSprawdz.UseVisualStyleBackColor = true;
+            buttonSprawdz.Click += buttonSprawdz_Click;
             // 
             // Form1
             // 
@@ -242,10 +243,12 @@
         private GroupBox groupBox1;
         private TextBox textBox7;
         private Label label8;
-        private TextBox textBox6;
+        private TextBox textBoxUVIndex;
         private Label labelUv;
-        private TextBox textBox5;
+        private TextBox textBoxPredkoscWiatru;
         private Label labelWiatr;
         private Button buttonSprawdz;
+        private TextBox textBoxVisibility;
+        private Label label;
     }
 }
