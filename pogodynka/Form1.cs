@@ -35,11 +35,15 @@ namespace pogodynka
             set { textBoxPredkoscWiatru.Text = value; }
         }
 
-        public string Visibility
+        public string Max_temperature
         {
-            set { textBoxVisibility.Text = value; }
+            set { textBoxMaxTemperature.Text = value; }
         }
 
+        public string WeatherIconUrl
+        {
+            set { pictureBoxIcon.LoadAsync(value); }
+        }
 
         private void buttonSprawdz_Click(object sender, EventArgs e)
         {

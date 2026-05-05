@@ -13,8 +13,8 @@ namespace pogodynka
         string Pressure { set; }
         string Humidity { set; }
         string WindSpeed { set; }
-        string Visibility { set; }
-        //string WeatherIcon { set; }
+        string Max_temperature { set; }
+        string WeatherIconUrl { set; }
         event Action CheckWeather;
     }
 }

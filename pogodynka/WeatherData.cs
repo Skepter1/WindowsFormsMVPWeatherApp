@@ -10,6 +10,7 @@ namespace pogodynka
     {
         public MainData main { get; set; }
         public WeatherDescription[] weather { get; set; }
+        public Wind wind { get; set; }
         public string name { get; set; }
     }
 
@@ -18,8 +19,12 @@ namespace pogodynka
         public double temp { get; set; }
         public int pressure { get; set; }
         public int humidity { get; set; }
-        public double wind { get; set; }
-        public double visibility { get; set; }
+        public double temp_max { get; set; }
+    }
+
+    public class Wind
+    {
+        public double speed { get; set; }
     }
 
     public class WeatherDescription
@@ -28,4 +33,5 @@ namespace pogodynka
         public string description { get; set; }
         public string icon { get; set; }
     }
+
 }

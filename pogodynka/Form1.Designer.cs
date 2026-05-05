@@ -39,14 +39,14 @@
             label4 = new Label();
             label5 = new Label();
             groupBox1 = new GroupBox();
-            textBox7 = new TextBox();
-            label8 = new Label();
-            textBoxVisibility = new TextBox();
+            pictureBoxIcon = new PictureBox();
+            textBoxMaxTemperature = new TextBox();
             label = new Label();
             textBoxPredkoscWiatru = new TextBox();
             labelWiatr = new Label();
             buttonSprawdz = new Button();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).BeginInit();
             SuspendLayout();
             // 
             // textBoxNazwaMiasta
@@ -132,9 +132,8 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox7);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBoxVisibility);
+            groupBox1.Controls.Add(pictureBoxIcon);
+            groupBox1.Controls.Add(textBoxMaxTemperature);
             groupBox1.Controls.Add(label);
             groupBox1.Controls.Add(textBoxPredkoscWiatru);
             groupBox1.Controls.Add(labelWiatr);
@@ -151,37 +150,30 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Informacje o pogodzie";
             // 
-            // textBox7
+            // pictureBoxIcon
             // 
-            textBox7.Location = new Point(356, 145);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 16;
+            pictureBoxIcon.Location = new Point(318, 93);
+            pictureBoxIcon.Name = "pictureBoxIcon";
+            pictureBoxIcon.Size = new Size(182, 114);
+            pictureBoxIcon.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBoxIcon.TabIndex = 13;
+            pictureBoxIcon.TabStop = false;
             // 
-            // label8
+            // textBoxMaxTemperature
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(389, 127);
-            label8.Name = "label8";
-            label8.Size = new Size(38, 15);
-            label8.TabIndex = 15;
-            label8.Text = "label8";
-            // 
-            // textBoxVisibility
-            // 
-            textBoxVisibility.Location = new Point(189, 145);
-            textBoxVisibility.Name = "textBoxVisibility";
-            textBoxVisibility.Size = new Size(100, 23);
-            textBoxVisibility.TabIndex = 14;
+            textBoxMaxTemperature.Location = new Point(189, 145);
+            textBoxMaxTemperature.Name = "textBoxMaxTemperature";
+            textBoxMaxTemperature.Size = new Size(100, 23);
+            textBoxMaxTemperature.TabIndex = 14;
             // 
             // label
             // 
             label.AutoSize = true;
-            label.Location = new Point(208, 127);
+            label.Location = new Point(170, 127);
             label.Name = "label";
-            label.Size = new Size(69, 15);
+            label.Size = new Size(142, 15);
             label.TabIndex = 13;
-            label.Text = "widoczność";
+            label.Text = "maksymalna temperatura";
             // 
             // textBoxPredkoscWiatru
             // 
@@ -224,6 +216,7 @@
             Text = "Form1";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,14 +234,14 @@
         private Label label4;
         private Label label5;
         private GroupBox groupBox1;
-        private TextBox textBox7;
         private Label label8;
         private TextBox textBoxUVIndex;
         private Label labelUv;
         private TextBox textBoxPredkoscWiatru;
         private Label labelWiatr;
         private Button buttonSprawdz;
-        private TextBox textBoxVisibility;
+        private TextBox textBoxMaxTemperature;
         private Label label;
+        private PictureBox pictureBoxIcon;
     }
 }

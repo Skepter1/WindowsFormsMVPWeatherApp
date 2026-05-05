@@ -28,9 +28,11 @@ namespace pogodynka
                 _view.Temperature = $"{weather.main.temp} °C"; // Wyślij do Labela przez interfejs
                 _view.Pressure = $"{weather.main.pressure} hPa";
                 _view.Humidity = $"{weather.main.humidity} %";
-                _view.WindSpeed = $"{weather.main.wind} m/s";
-                _view.Visibility = $"{weather.main.visibility}";
-
+                _view.WindSpeed = $"{weather.wind.speed} m/s";
+                _view.Max_temperature = $"{weather.main.temp_max} °C";
+                string iconCode = weather.weather[0].icon;
+                string url = $"https://openweathermap.org/img/wn/{iconCode}@2x.png";
+                _view.WeatherIconUrl = url;
                 // Tutaj też ustawisz ikonę na podstawie weather.weather[0].icon
             }
         }
