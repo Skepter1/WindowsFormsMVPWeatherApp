@@ -11,6 +11,7 @@ namespace pogodynka
         public MainData main { get; set; }
         public WeatherDescription[] weather { get; set; }
         public Wind wind { get; set; }
+        public string cod { get; set; }
         public string name { get; set; }
     }
 

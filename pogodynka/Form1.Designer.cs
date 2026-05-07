@@ -45,13 +45,16 @@
             textBoxPredkoscWiatru = new TextBox();
             labelWiatr = new Label();
             buttonSprawdz = new Button();
+            labelCityNotFound = new Label();
+            label1 = new Label();
+            label2 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).BeginInit();
             SuspendLayout();
             // 
             // textBoxNazwaMiasta
             // 
-            textBoxNazwaMiasta.Location = new Point(129, 84);
+            textBoxNazwaMiasta.Location = new Point(121, 40);
             textBoxNazwaMiasta.Name = "textBoxNazwaMiasta";
             textBoxNazwaMiasta.Size = new Size(155, 23);
             textBoxNazwaMiasta.TabIndex = 0;
@@ -59,7 +62,7 @@
             // nazwaMiasta
             // 
             nazwaMiasta.AutoSize = true;
-            nazwaMiasta.Location = new Point(43, 87);
+            nazwaMiasta.Location = new Point(35, 43);
             nazwaMiasta.Name = "nazwaMiasta";
             nazwaMiasta.Size = new Size(80, 15);
             nazwaMiasta.TabIndex = 2;
@@ -67,16 +70,17 @@
             // 
             // comboBoxStolica
             // 
+            comboBoxStolica.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxStolica.FormattingEnabled = true;
-            comboBoxStolica.Location = new Point(399, 84);
+            comboBoxStolica.Location = new Point(387, 43);
             comboBoxStolica.Name = "comboBoxStolica";
-            comboBoxStolica.Size = new Size(155, 23);
+            comboBoxStolica.Size = new Size(171, 23);
             comboBoxStolica.TabIndex = 3;
             // 
             // stolica
             // 
             stolica.AutoSize = true;
-            stolica.Location = new Point(351, 87);
+            stolica.Location = new Point(339, 46);
             stolica.Name = "stolica";
             stolica.Size = new Size(42, 15);
             stolica.TabIndex = 4;
@@ -143,7 +147,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(textBoxCisnienie);
-            groupBox1.Location = new Point(43, 196);
+            groupBox1.Location = new Point(35, 145);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(523, 213);
             groupBox1.TabIndex = 11;
@@ -152,9 +156,10 @@
             // 
             // pictureBoxIcon
             // 
-            pictureBoxIcon.Location = new Point(318, 93);
+            pictureBoxIcon.BackColor = SystemColors.ControlLight;
+            pictureBoxIcon.Location = new Point(380, 118);
             pictureBoxIcon.Name = "pictureBoxIcon";
-            pictureBoxIcon.Size = new Size(182, 114);
+            pictureBoxIcon.Size = new Size(83, 50);
             pictureBoxIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBoxIcon.TabIndex = 13;
             pictureBoxIcon.TabStop = false;
@@ -193,19 +198,49 @@
             // 
             // buttonSprawdz
             // 
-            buttonSprawdz.Location = new Point(213, 158);
+            buttonSprawdz.Location = new Point(35, 83);
             buttonSprawdz.Name = "buttonSprawdz";
-            buttonSprawdz.Size = new Size(155, 23);
+            buttonSprawdz.Size = new Size(523, 23);
             buttonSprawdz.TabIndex = 12;
             buttonSprawdz.Text = "Sprawdź pogodę";
             buttonSprawdz.UseVisualStyleBackColor = true;
             buttonSprawdz.Click += buttonSprawdz_Click;
             // 
+            // labelCityNotFound
+            // 
+            labelCityNotFound.AutoSize = true;
+            labelCityNotFound.Location = new Point(155, 109);
+            labelCityNotFound.Name = "labelCityNotFound";
+            labelCityNotFound.RightToLeft = RightToLeft.No;
+            labelCityNotFound.Size = new Size(0, 15);
+            labelCityNotFound.TabIndex = 13;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(161, 127);
+            label1.Name = "label1";
+            label1.RightToLeft = RightToLeft.No;
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 13;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(163, 120);
+            label2.Name = "label2";
+            label2.RightToLeft = RightToLeft.No;
+            label2.Size = new Size(0, 15);
+            label2.TabIndex = 13;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(579, 395);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(labelCityNotFound);
             Controls.Add(buttonSprawdz);
             Controls.Add(groupBox1);
             Controls.Add(stolica);
@@ -243,5 +278,8 @@
         private TextBox textBoxMaxTemperature;
         private Label label;
         private PictureBox pictureBoxIcon;
+        private Label labelCityNotFound;
+        private Label label1;
+        private Label label2;
     }
 }

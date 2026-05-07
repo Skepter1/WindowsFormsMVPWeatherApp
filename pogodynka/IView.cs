@@ -15,6 +15,8 @@ namespace pogodynka
         string WindSpeed { set; }
         string Max_temperature { set; }
         string WeatherIconUrl { set; }
+        string CityNotFoundMessage { set; }
+
         event Action CheckWeather;
     }
 }

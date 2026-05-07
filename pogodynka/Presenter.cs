@@ -20,12 +20,23 @@ namespace pogodynka
 
         private async void OnGetWeatherClicked()
         {
-            string city = _view.CityName; // Pobierz z TextBoxa przez interfejs
-            var weather = await _model.GetWeatherAsync(city); // Pobierz z API przez Model
+            string city = _view.CityName;
+            var weather = await _model.GetWeatherAsync(city);
 
             if (weather != null)
             {
-                _view.Temperature = $"{weather.main.temp} °C"; // Wyślij do Labela przez interfejs
+                if (weather.cod != "200")
+                {
+                    _view.CityNotFoundMessage = "Nie znaleziono miasta. Sprawdź nazwę i spróbuj ponownie.";
+                    _view.Temperature = "";
+                    _view.Pressure = "";
+                    _view.Humidity = "";
+                    _view.WindSpeed = "";
+                    _view.Max_temperature = "";
+                    return;
+                }
+                _view.CityNotFoundMessage = "";
+                _view.Temperature = $"{weather.main.temp} °C";
                 _view.Pressure = $"{weather.main.pressure} hPa";
                 _view.Humidity = $"{weather.main.humidity} %";
                 _view.WindSpeed = $"{weather.wind.speed} m/s";
@@ -33,7 +44,6 @@ namespace pogodynka
                 string iconCode = weather.weather[0].icon;
                 string url = $"https://openweathermap.org/img/wn/{iconCode}@2x.png";
                 _view.WeatherIconUrl = url;
-                // Tutaj też ustawisz ikonę na podstawie weather.weather[0].icon
             }
         }
     }
